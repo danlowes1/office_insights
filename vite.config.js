@@ -8,6 +8,9 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   plugins: [react()],
+  build: {
+    outDir: "public",   // must match express.static("public")
+  },  
   resolve: {
     alias: {
       react: fileURLToPath(new URL("./node_modules/react", import.meta.url)),
@@ -22,3 +25,4 @@ export default defineConfig({
   },
   
 });
+

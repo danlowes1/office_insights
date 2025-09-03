@@ -13,6 +13,7 @@ mysql2
 bcrypt
 --save-dev @vitejs/plugin-react
 npm install cors
+npm install pg pg-hstore
 
 # Additional setup instructions
 Change the .env file to include your MySQL database password:
@@ -27,4 +28,4 @@ Then run the following command:
 source db/schema.sql;
 The above creates an empty database. If you want to add some test data into it, run this: 
 source db/seed_data.sql;
-
+psql -U postgres -h localhost
